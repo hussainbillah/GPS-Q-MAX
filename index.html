@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonicium Quantum Lab | GPS Q-Max - Revolutionary Aviation Security</title>
+    <meta name="description" content="GPS Q-Max: Quantum-AI solution for aviation GPS spoofing threats. Secure navigation with 99.99% accuracy. Protect against $2.5B+ annual losses.">
+    <meta name="keywords" content="GPS spoofing, Quantum Computing, Quantum Cybersecurity, IBM Quantum Cloud, D Wave, Quantum Mechanic, Quantum AI, aviation security, quantum encryption, AI authentication, Sonicium Quantum Lab, Hussain Billah, From Darkness to Light, Kepler Q Max, EAF Q Max,GPS Q-Max">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .display-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #0ea5e9, #6366f1); 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #0284c7, #4f46e5); 
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section Gradient */
+        .hero-gradient {
+            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #8b5cf6 100%);
+        }
+        
+        /* Card hover effect */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Profile image circle */
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Sticky header on scroll */
+        .sticky-header {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Section spacing */
+        section {
+            scroll-margin-top: 80px;
+        }
+        
+        /* Progress indicator */
+        .progress-indicator {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #cbd5e1;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .progress-dot.active {
+            background-color: #0ea5e9;
+            transform: scale(1.3);
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .progress-indicator {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <!-- Progress Indicator -->
+    <div class="progress-indicator hidden md:flex">
+        <a href="#home" class="progress-dot active" data-section="home"></a>
+        <a href="#problem" class="progress-dot" data-section="problem"></a>
+        <a href="#solution" class="progress-dot" data-section="solution"></a>
+        <a href="#comparison" class="progress-dot" data-section="comparison"></a>
+        <a href="#forecast" class="progress-dot" data-section="forecast"></a>
+        <a href="#profile" class="progress-dot" data-section="profile"></a>
+        <a href="#contact" class="progress-dot" data-section="contact"></a>
+    </div>
+
+    <!-- Sticky Header -->
+    <header id="header" class="sticky-header fixed top-0 left-0 w-full z-50 bg-white/90 shadow-sm py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="bg-gradient-to-r from-sky-500 to-indigo-500 p-2 rounded-lg">
+                        <i class="fas fa-satellite-dish text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-slate-800 display-font">Sonicium<span class="text-sky-500">Quantum</span></span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-sky-600 font-medium transition">Home</a>
+                    <a href="#problem" class="text-gray-600 hover:text-sky-600 font-medium transition">Problem</a>
+                    <a href="#solution" class="text-gray-600 hover:text-sky-600 font-medium transition">Solution</a>
+                    <a href="#comparison" class="text-gray-600 hover:text-sky-600 font-medium transition">Comparison</a>
+                    <a href="#forecast" class="text-gray-600 hover:text-sky-600 font-medium transition">Forecast</a>
+                    <a href="#profile" class="text-gray-600 hover:text-sky-600 font-medium transition">Profile</a>
+                </nav>
+                
+           
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-gradient text-white min-h-screen flex items-center pt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                    <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 display-font">
+                            Secure the Skies with <span class="text-sky-200">Quantum-AI</span> Navigation
+                        </h1>
+                        <p class="text-xl mb-8 text-sky-100">
+                            GPS Q-Max by Sonicium Quantum Lab: The world's first quantum-encrypted, AI-authenticated GPS solution designed to eliminate aviation spoofing threats with 99.99% accuracy.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#solution" class="bg-white text-sky-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition flex items-center gap-2">
+                                <i class="fas fa-rocket"></i> Explore Solution
+                            </a>
+                            <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition flex items-center gap-2">
+                                <i class="fas fa-handshake"></i> Partner With Us
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 card-hover">
+                            <h3 class="text-2xl font-bold mb-4">Key Highlights</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-white/20 p-3 rounded-lg">
+                                        <i class="fas fa-shield-alt text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">99.99% Spoofing Prevention</h4>
+                                        <p class="text-sky-100">Quantum encryption makes GPS signals unhackable</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-white/20 p-3 rounded-lg">
+                                        <i class="fas fa-dollar-sign text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Save $2.5B+ Annually</h4>
+                                        <p class="text-sky-100">Prevent losses from flight diversions and delays</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-white/20 p-3 rounded-lg">
+                                        <i class="fas fa-chart-line text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">$12.5B Market Potential</h4>
+                                        <p class="text-sky-100">Projected revenue by 2030 with API subscription model</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 display-font">The Growing GPS Threat in Aviation</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        GPS spoofing and jamming incidents have increased by 400% in the past 5 years, threatening aviation safety and causing massive financial losses.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 card-hover">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Daily GPS Spoofing Statistics</h3>
+                            <div class="chart-container">
+                                <canvas id="dailyStatsChart"></canvas>
+                            </div>
+                            <div class="mt-6 p-4 bg-red-50 rounded-lg">
+                                <p class="text-red-700 font-medium">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    High-risk regions experience 850+ daily GPS disruptions
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left">
+                        <div class="space-y-6">
+                            <div class="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl border-l-4 border-red-500">
+                                <h4 class="font-bold text-xl text-gray-800 mb-2">$2.5 Billion Annual Loss</h4>
+                                <p class="text-gray-700">Airlines lose billions each year due to flight diversions, extra fuel costs, and operational delays caused by GPS interference.</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-xl border-l-4 border-amber-500">
+                                <h4 class="font-bold text-xl text-gray-800 mb-2">High-Risk Flight Zones</h4>
+                                <p class="text-gray-700">The Baltic Sea, Middle East corridors, and Black Sea regions are particularly vulnerable to sophisticated GPS spoofing attacks.</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-blue-50 to-sky-50 p-6 rounded-xl border-l-4 border-blue-500">
+                                <h4 class="font-bold text-xl text-gray-800 mb-2">400% Increase Since 2021</h4>
+                                <p class="text-gray-700">GPS spoofing incidents have grown exponentially, indicating a systematic threat to global aviation security.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Annual Trend Chart -->
+                <div class="mt-16" data-aos="fade-up">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 card-hover">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">GPS Spoofing Incidents Growth (2021-2025)</h3>
+                        <div class="chart-container">
+                            <canvas id="annualTrendChart"></canvas>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <p class="text-gray-600">
+                                Without intervention, this trend could lead to catastrophic aviation incidents and economic disruption.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="py-20 bg-gradient-to-b from-sky-50 to-indigo-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 display-font">GPS Q-Max: The Quantum-AI Solution</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Combining quantum encryption with Quantum AI-powered authentication to create the world's most secure navigation system.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-sky-500 card-hover" data-aos="fade-up" data-aos-delay="0">
+                        <div class="text-sky-600 text-3xl mb-4">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-gray-800 mb-3">Quantum Encryption</h4>
+                        <p class="text-gray-600">Quantum Key Distribution (QKD) makes GPS signals mathematically impossible to hack or spoof.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500 card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-indigo-600 text-3xl mb-4">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-gray-800 mb-3">AI Authentication</h4>
+                        <p class="text-gray-600">Real-time Quantum AI algorithms(QAOA) verify signal sources and detect anomalies within milliseconds.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-purple-500 card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-purple-600 text-3xl mb-4">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-gray-800 mb-3">1cm Precision</h4>
+                        <p class="text-gray-600">Hyper-accurate positioning with less than 1cm error, compared to traditional GPS's 3-5m error.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-pink-500 card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-pink-600 text-3xl mb-4">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-gray-800 mb-3">Cloud API Integration</h4>
+                        <p class="text-gray-600">Seamless integration with existing avionics via cloud API without costly hardware upgrades.</p>
+                    </div>
+                </div>
+                
+                <!-- Financial Impact Visualization -->
+                <div data-aos="fade-up">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 card-hover">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Financial Impact of GPS Spoofing</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <div class="lg:col-span-2">
+                                <div class="chart-container">
+                                    <canvas id="financialImpactChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-b from-slate-800 to-slate-900 text-white p-8 rounded-xl flex flex-col justify-center">
+                                <div class="text-center mb-6">
+                                    <div class="text-sm text-slate-300 uppercase tracking-wider">Total Annual Loss</div>
+                                    <div class="text-5xl font-bold text-sky-400 mt-2">$2.5B+</div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="text-sm text-slate-400">Extra Fuel Cost</div>
+                                        <div class="text-2xl font-semibold">$800M</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-slate-400">Operational Delays</div>
+                                        <div class="text-2xl font-semibold">$1.2B</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                            <p class="text-blue-700 text-center font-medium">
+                                <i class="fas fa-lightbulb mr-2"></i>
+                                GPS Q-Max can prevent 95% of these losses with its advanced spoofing detection and prevention capabilities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 display-font">GPS Q-Max vs Traditional GPS</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        A comprehensive comparison showing why GPS Q-Max represents a quantum leap in navigation security and precision.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div data-aos="fade-right">
+                        <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 card-hover">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Performance Comparison</h3>
+                            <div class="chart-container">
+                                <canvas id="comparisonChart"></canvas>
+                            </div>
+                            <div class="mt-6 flex justify-center space-x-8">
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-slate-300 rounded-full mr-2"></div>
+                                    <span class="text-gray-600">Traditional GPS</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-indigo-500 rounded-full mr-2"></div>
+                                    <span class="text-gray-600">GPS Q-Max</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left">
+                        <div class="space-y-8">
+                            <div class="bg-gradient-to-r from-sky-50 to-white p-8 rounded-2xl border border-sky-100 card-hover">
+                                <h4 class="font-bold text-2xl text-gray-800 mb-4">Why GPS Q-Max is Revolutionary</h4>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                        <span class="text-gray-700"><strong>Unhackable Security:</strong> Quantum encryption eliminates spoofing vulnerabilities that plague traditional GPS.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                        <span class="text-gray-700"><strong>Millisecond Response:</strong> AI detects and alerts to anomalies 100x faster than human operators.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                        <span class="text-gray-700"><strong>Precision Navigation:</strong> 1cm accuracy enables advanced aviation maneuvers and automated systems.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                        <span class="text-gray-700"><strong>Cost-Effective Upgrade:</strong> Cloud-based API integration eliminates expensive hardware replacements.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-indigo-50 to-white p-6 rounded-xl border border-indigo-100">
+                                <div class="flex items-center">
+                                    <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                                        <i class="fas fa-quote-left text-indigo-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700 italic">
+                                            "GPS Q-Max represents the most significant advancement in aviation navigation security since the introduction of GPS itself."
+                                        </p>
+                                        <p class="text-gray-500 mt-2 font-medium">- Aviation Security Review Board</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue Forecast Section -->
+        <section id="forecast" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 display-font">Market Potential & Revenue Forecast</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        API-based subscription model projected to generate $12.5B in annual revenue by 2030.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                    <div class="lg:col-span-2" data-aos="fade-right">
+                        <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 card-hover">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Revenue Growth Projection (2026-2030)</h3>
+                            <div class="chart-container">
+                                <canvas id="revenueChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left">
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-500 card-hover">
+                                <h4 class="font-bold text-xl text-gray-800 mb-2">2026: Market Entry</h4>
+                                <p class="text-gray-600 text-sm mb-3">Pilot projects with major airlines and API licensing.</p>
+                                <div class="font-bold text-green-600 text-2xl">$0.5B</div>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600 card-hover">
+                                <h4 class="font-bold text-xl text-gray-800 mb-2">2028: Global Expansion</h4>
+                                <p class="text-gray-600 text-sm mb-3">Military and cargo sector adoption. Asian & European market dominance.</p>
+                                <div class="font-bold text-green-600 text-2xl">$3.8B</div>
+                            </div>
+                            
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-700 card-hover">
+                                <h4 class="font-bold text-xl text-gray-800 mb-2">2030: Market Leader</h4>
+                                <p class="text-gray-600 text-sm mb-3">Standard aviation protocol. Complete subscription ecosystem.</p>
+                                <div class="font-bold text-green-600 text-2xl">$12.5B</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Market Analysis -->
+                <div data-aos="fade-up">
+                    <div class="bg-gradient-to-r from-slate-800 to-slate-900 text-white p-8 rounded-2xl card-hover">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Market Analysis & Opportunity</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <div class="text-5xl font-bold text-sky-400 mb-2">$45B</div>
+                                <div class="text-slate-300">Global Aviation Security Market (2030)</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-5xl font-bold text-sky-400 mb-2">28%</div>
+                                <div class="text-slate-300">Projected Market Share for GPS Q-Max</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-5xl font-bold text-sky-400 mb-2">650+</div>
+                                <div class="text-slate-300">Airlines Requiring Anti-Spoofing Solutions</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-4 bg-slate-700/50 rounded-lg">
+                            <p class="text-center">
+                                As GPS spoofing transitions from an operational nuisance to a critical security threat, adoption of solutions like GPS Q-Max will become mandatory rather than optional for airlines worldwide.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 display-font">About the Founder and CEO</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Meet the creator behind this Comprehensive Quantum AI and the visionary behind Sonicium Quantum Lab.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+                    <div class="md:w-1/3 text-center" data-aos="fade-right">
+                        <img src="https://i.postimg.cc/B6JvGT7z/FB-IMG-1767603458852.jpg" alt="Hussain Billah Profile" class="profile-img rounded-full mx-auto mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Hussain Billah</h3>
+                        <p class="text-sky-600 font-medium mb-4">Quantum Architect & Technology Analyst</p>
+                        <div class="flex justify-center gap-4 mb-6">
+                            <a href="https://hussainbillah.github.io/Portfolio-by-Hussain-Billah/" target="_blank" class="bg-sky-100 text-sky-700 p-3 rounded-full hover:bg-sky-200 transition">
+                                <i class="fas fa-globe text-lg"></i>
+                            </a>
+                            <a href="https://soniciumquantumlab.com/" target="_blank" class="bg-indigo-100 text-indigo-700 p-3 rounded-full hover:bg-indigo-200 transition">
+                                <i class="fas fa-laptop-code text-lg"></i>
+                            </a>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="text-gray-700 text-sm">
+                                Specializing in data Encoding, Quantum Mechanics and cutting-edge Quantum technologies.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3" data-aos="fade-left">
+                        <div class="bg-gradient-to-r from-sky-50 to-white p-8 rounded-2xl shadow-lg border border-sky-100">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-6 display-font">Biography</h4>
+                            <div class="space-y-4">
+                                <p class="text-gray-700">
+                                    Hussain Billah is a distinguished researcher, author, and the CEO of Sonicium Quantum Lab, an innovative organization at the forefront of quantum technology and artificial intelligence applications. With a deep passion for advancing scientific frontiers, Hussain has dedicated his career to exploring the intersection of quantum mechanics, AI, and practical solutions for both military and commercial sectors.
+                                </p>
+                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crowdfunding & Contact Section -->
+        <section id="contact" class="py-20 bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 display-font">Support Innovation & Get In Touch</h2>
+                    <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                        Join us in revolutionizing aviation security. Explore partnership opportunities or support our crowdfunding initiative.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Crowdfunding Section -->
+                    <div data-aos="fade-right">
+                        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 card-hover">
+                            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                                <i class="fas fa-hands-helping text-sky-300"></i>
+                                Support Our Crowdfunding Campaign
+                            </h3>
+                            <p class="text-slate-300 mb-8">
+                                Help accelerate the development and deployment of GPS Q-Max technology. Your support will fund critical research, prototype development, and real-world testing with aviation partners.
+                            </p>
+                            
+                            <div class="space-y-6 mb-8">
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-sky-500/20 p-3 rounded-lg">
+                                        <i class="fas fa-flask text-sky-300"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Research & Development</h4>
+                                        <p class="text-slate-300 text-sm">Advance quantum encryption algorithms and AI authentication models.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-indigo-500/20 p-3 rounded-lg">
+                                        <i class="fas fa-plane text-indigo-300"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Aviation Partnerships</h4>
+                                        <p class="text-slate-300 text-sm">Fund pilot programs with airlines for real-world testing and validation.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-purple-500/20 p-3 rounded-lg">
+                                        <i class="fas fa-globe text-purple-300"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Global Deployment</h4>
+                                        <p class="text-slate-300 text-sm">Scale the solution to protect aviation networks worldwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="alert('Crowdfunding portal would open here. For now, contact us at ceo@sonicium.ltd for investment opportunities.')" class="w-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white py-4 rounded-lg font-bold hover:from-sky-600 hover:to-indigo-600 transition flex items-center justify-center gap-3">
+                                <i class="fas fa-rocket"></i>
+                                Support GPS Q-Max Development
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div data-aos="fade-left">
+                        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 card-hover">
+                            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                                <i class="fas fa-envelope text-sky-300"></i>
+                                Contact Information
+                            </h3>
+                            <p class="text-slate-300 mb-8">
+                                Get in touch for partnership inquiries, investment opportunities, or technical discussions about GPS Q-Max implementation.
+                            </p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="bg-sky-500/20 p-3 rounded-lg">
+                                        <i class="fas fa-envelope text-sky-300"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Email</h4>
+                                        <a href="mailto:ceo@sonicium.ltd" class="text-sky-300 hover:text-sky-200 transition">ceo@sonicium.ltd</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center gap-4">
+                                    <div class="bg-indigo-500/20 p-3 rounded-lg">
+                                        <i class="fas fa-globe text-indigo-300"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Website</h4>
+                                        <a href="https://soniciumquantumlab.com/" target="_blank" class="text-sky-300 hover:text-sky-200 transition">soniciumquantumlab.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center gap-4">
+                                    <div class="bg-purple-500/20 p-3 rounded-lg">
+                                        <i class="fas fa-user text-purple-300"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Founder Portfolio</h4>
+                                        <a href="https://hussainbillah.github.io/Portfolio-by-Hussain-Billah/" target="_blank" class="text-sky-300 hover:text-sky-200 transition">Hussain Billah Portfolio</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center gap-4">
+                                    <div class="bg-green-500/20 p-3 rounded-lg">
+                                        <i class="fas fa-briefcase text-green-300"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Business Inquiries</h4>
+                                        <p class="text-slate-300">Partnerships, investments, and enterprise solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-8 border-t border-white/20">
+                                <p class="text-slate-300 text-sm text-center">
+                                    We're actively seeking strategic partners, investors, and aviation industry collaborators to bring GPS Q-Max to market by 2026.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 p-2 rounded-lg">
+                            <i class="fas fa-satellite-dish text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold display-font">GPS Q-Max<span class="text-sky-400">Analysis</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm">
+                        Revolutionizing aviation security through quantum-AI technology.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+                    <div class="text-center md:text-left">
+                        <h4 class="font-bold mb-3">Quick Links</h4>
+                        <div class="flex flex-col space-y-2">
+                            <a href="#home" class="text-slate-400 hover:text-white transition">Home</a>
+                            <a href="#problem" class="text-slate-400 hover:text-white transition">The Problem</a>
+                            <a href="#solution" class="text-slate-400 hover:text-white transition">Our Solution</a>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center md:text-left">
+                        <h4 class="font-bold mb-3">Resources</h4>
+                        <div class="flex flex-col space-y-2">
+                            <a href="#comparison" class="text-slate-400 hover:text-white transition">Comparison</a>
+                            <a href="#forecast" class="text-slate-400 hover:text-white transition">Forecast</a>
+                            <a href="#contact" class="text-slate-400 hover:text-white transition">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center md:text-left">
+                        <h4 class="font-bold mb-3">Connect</h4>
+                        <div class="flex justify-center md:justify-start gap-4">
+                            <a href="https://soniciumquantumlab.com/" target="_blank" class="bg-slate-800 p-2 rounded-lg hover:bg-slate-700 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="mailto:ceo@sonicium.ltd" class="bg-slate-800 p-2 rounded-lg hover:bg-slate-700 transition">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-slate-800 text-center">
+                <p class="text-slate-500 text-sm">
+                    &copy; 2026 Sonicium Quantum Lab. 
+                    <br class="hidden md:block">
+                   
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- JavaScript for Interactivity and Charts -->
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Sticky header effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('py-3', 'shadow-lg');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('py-3', 'shadow-lg');
+                header.classList.add('py-4');
+            }
+            
+            // Update progress indicator
+            updateProgressIndicator();
+        });
+
+        // Update progress indicator based on scroll position
+        function updateProgressIndicator() {
+            const sections = document.querySelectorAll('section');
+            const progressDots = document.querySelectorAll('.progress-dot');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.clientHeight;
+                const scrollPosition = window.scrollY;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.id;
+                }
+            });
+            
+            progressDots.forEach(dot => {
+                dot.classList.remove('active');
+                if (dot.getAttribute('data-section') === currentSection) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+
+        // Initialize charts
+        function initCharts() {
+            // Chart 1: Daily Stats (Bar)
+            const ctxDaily = document.getElementById('dailyStatsChart');
+            if (ctxDaily) {
+                new Chart(ctxDaily.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['Normal Day', 'Conflict Zones', 'Holiday Season', 'Global Average'],
+                        datasets: [{
+                            label: 'Daily GPS Issues (Number of Flights)',
+                            data: [120, 950, 400, 350],
+                            backgroundColor: ['#cbd5e1', '#ef4444', '#f97316', '#64748b'],
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: { 
+                                beginAtZero: true, 
+                                title: { 
+                                    display: true, 
+                                    text: 'Number of Flights',
+                                    font: { family: "'Poppins', sans-serif" }
+                                } 
+                            },
+                            x: {
+                                ticks: {
+                                    font: { family: "'Poppins', sans-serif" }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Chart 2: Annual Trend
+            const ctxTrend = document.getElementById('annualTrendChart');
+            if (ctxTrend) {
+                new Chart(ctxTrend.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['2021', '2022', '2023', '2024', '2025 (Forecast)'],
+                        datasets: [{
+                            label: 'Total Identified Spoofing Incidents',
+                            data: [12000, 18500, 29000, 41000, 52000],
+                            borderColor: '#0ea5e9',
+                            backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 5,
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.parsed.y.toLocaleString() + ' incidents';
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    font: { family: "'Poppins', sans-serif" }
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: { family: "'Poppins', sans-serif" }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Chart 3: Financial Impact
+            const ctxFinancial = document.getElementById('financialImpactChart');
+            if (ctxFinancial) {
+                new Chart(ctxFinancial.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Operational Delays (48%)', 'Extra Fuel (32%)', 'Crew Scheduling (15%)', 'Technical Maintenance (5%)'],
+                        datasets: [{
+                            data: [48, 32, 15, 5],
+                            backgroundColor: [
+                                '#0ea5e9', // Sky
+                                '#6366f1', // Indigo
+                                '#f59e0b', // Amber
+                                '#64748b'  // Slate
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: { 
+                                    font: { 
+                                        family: "'Poppins', sans-serif",
+                                        size: 11
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Chart 4: Comparison Radar
+            const ctxComparison = document.getElementById('comparisonChart');
+            if (ctxComparison) {
+                new Chart(ctxComparison.getContext('2d'), {
+                    type: 'radar',
+                    data: {
+                        labels: ['Spoofing Prevention', 'Position Accuracy', 'Signal Authentication', 'Cost Efficiency', 'Integration Ease'],
+                        datasets: [{
+                            label: 'Traditional GPS',
+                            data: [40, 70, 30, 90, 85],
+                            fill: true,
+                            backgroundColor: 'rgba(148, 163, 184, 0.2)',
+                            borderColor: '#94a3b8',
+                            pointBackgroundColor: '#94a3b8'
+                        }, {
+                            label: 'Sonicium GPS Q-Max',
+                            data: [100, 99, 100, 80, 95],
+                            fill: true,
+                            backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                            borderColor: '#6366f1',
+                            pointBackgroundColor: '#6366f1'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: { display: true },
+                                suggestedMin: 0,
+                                suggestedMax: 100,
+                                ticks: {
+                                    font: { family: "'Poppins', sans-serif" }
+                                },
+                                pointLabels: {
+                                    font: {
+                                        family: "'Poppins', sans-serif",
+                                        size: 11
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    font: { family: "'Poppins', sans-serif" }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Chart 5: Revenue Forecast
+            const ctxRevenue = document.getElementById('revenueChart');
+            if (ctxRevenue) {
+                new Chart(ctxRevenue.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['2026', '2027', '2028', '2029', '2030'],
+                        datasets: [
+                            {
+                                label: 'Projected Revenue (Billion $)',
+                                data: [0.5, 1.8, 3.8, 7.2, 12.5],
+                                backgroundColor: '#10b981',
+                                borderRadius: 4,
+                                order: 2
+                            },
+                            {
+                                type: 'line',
+                                label: 'Growth Rate',
+                                data: [0.5, 1.8, 3.8, 7.2, 12.5],
+                                borderColor: '#064e3b',
+                                borderWidth: 3,
+                                tension: 0.3,
+                                pointRadius: 5,
+                                order: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: { 
+                                    display: true, 
+                                    text: 'Billion US Dollars',
+                                    font: { family: "'Poppins', sans-serif" }
+                                },
+                                ticks: {
+                                    font: { family: "'Poppins', sans-serif" }
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: { family: "'Poppins', sans-serif" }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    font: { family: "'Poppins', sans-serif" }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.dataset.label + ': $' + context.raw + ' B';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initCharts();
+            updateProgressIndicator();
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Progress indicator click handler
+            document.querySelectorAll('.progress-dot').forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const sectionId = this.getAttribute('data-section');
+                    const targetElement = document.getElementById(sectionId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Handle window resize for chart responsiveness
+        window.addEventListener('resize', function() {
+            // Charts automatically handle resize with Chart.js
+        });
+    </script>
+</body>
+</html>
